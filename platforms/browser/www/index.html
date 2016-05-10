@@ -1,56 +1,156 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
+        <title>NYC Safe</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/themes/nycsafe.css" />
+        <link rel="stylesheet" type="text/css" href="css/themes/nycsafe.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>NYC Safe</title>
-        <meta name="viewport" content="initial-scale=1.0">
-        <meta charset="utf-8">
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script>
-         $(document).one('deviceready', initApplication);
-      </script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    
         <style>
           html, body {
             height: 100%;
             margin: 0;
             padding: 0;
           }
-          #map {
-            height: 100%;
-          }
+          #map-page, #map-canvas { width: 100%; height: 80%; padding: 0; }
+
         </style>
 
     </head>
+    
     <body>
-        
 
-        <div id="map"></div>
+<!--- Page One -->
+      <div data-role="page" id="map-page" data-url="map-page">
+          
+        <div data-role="header" data-theme="a">
+        <center><img src="img/icon.png" height="42" width="42"></center>
+        </div>
+        
+        <div role="main" class="ui-content" id="map-canvas"></div>
+    
+        <div data-role="footer">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#tips" data-icon="info">safety tips</a></li>
+              <li><a href="tel:911" data-icon="phone" data-role="button">Call 911</a></li>
+              
+            </ul>
+          </div>
+          <h6>Copyright ® Renata Rocha</h6>
+        </div> 
+      </div>
+
+
+<!--- Page two -->
+      <div data-role="page" id="tips">
+        <div data-role="header" data-theme="a" class="header">
+        <center><img src="img/icon.png" height="42" width="42"></center>
+        </div>
+
+        <div data-role="main" class="ui-content">
+        <br/><br/>
+          <p><center>
+            <b>Crime Prevention Division</b>
+            <br/>34 1/2 East 12th Street
+            <br/>New York, N.Y. 10003
+            <br/><a href="tel:212-614-6741" data-icon="phone">212-614-6741</a>
+          </center></p>
+
+          <p><b>Four ways to increase your personal safety are:</b>
+            <ul>
+              <li>Reduce or eliminate opportunities that may make you a target.</li>
+              <li>Increase awareness in places you're most comfortable.</li>
+              <li>Trust your instincts regardless of feeling embarrassed.</li>
+              <li>Prepare your schedule daily with safety in mind.</li>
+            </ul>
+          </p>
+
+
+
+<p><b>PURSE/WALLET SAFETY</b>
+<br/><br/>
+     Carry purses, portfolios or briefcases in a manner that will allow you to let go.  Straps placed across your shoulder, around your neck or wrapped around your waist have caused injuries because women could not free themselves during a purse snatch.
+<br/><br/>
+     Always be aware of your surroundings and carry your pocketbook clasp toward you, close to your body, tucked in the bend of your elbow as if it were a football.  If there is a long strap, wrap it around the bag.
+<br/><br/>
+     If someone attempts to snatch your pocket book, let go of it, especially if there is a weapon involved.  When dining out, the only place for your purse should be your lap.  The back of a chair is an easy target for a thief.  Never carry a wallet in a rear pocket; use a front trouser or an inside coat pocket. 
+<br/><br/>
+     Be particularly aware of your purse/wallet in crowded situations, such as rush-hour trains and buses.  If you are jostled in a crowd, be aware that a pickpocket might be responsible.  Beware of arguments or commotions designed to distract you while your pocket or purse is being picked.
+<br/><br/>
+     Minimize the  amount  of money,  credit  cards and valuables  you carry by only taking items that are necessary for the day.  Divide money between your purse/wallet and pockets.  Carry your keys on your person separate from your identification.</p>
+
+
+WALKING - BE STREET SMART
+<br/><br/>
+     Use well-populated and well-lit streets. If you suspect you're being followed, stay away from deserted blocks and head for an area where there are people or to the nearest open store.  If you're driven home, ask the driver to wait until you are safely inside.  Should a motorist bother you while you are walking, reverse your direction. If you are still followed, seek a safe location and yell for help, if possible.
+<br/><br/>
+WHILE DRIVING
+<br/><br/>
+     Upon approaching your car, look to make sure no one is hiding in or around the vehicle, especially in the back seat. Check your tires for flats.  Keep windows rolled up, except for a small opening for ventilation and keep the doors locked at all times.
+<br/><br/>
+     Keep valuables secured in the trunk, not lying on the seat next to you. Put your purse on the floor of your car.  Plan your route before you leave. Displaying a map will send a message that you're unfamiliar with the area.
+<br/><br/>
+     When stopped in traffic, always leave enough space between your car and the one in front of you. This will allow you to pass easily, if neces­sary.  Keep your car well maintained and the gas tank at least half full to avoid getting stranded.
+<br/><br/>
+     Should you suspect that you are being followed, make several turns down active streets. If the vehicle continues to follow, head for the nearest police station, fire house, or open store. Avoid
+driving to your home.  If someone attempts to force you off the road, remain calm and blow your horn continuously to attract attention. If forced off the road, stop, put your car in reverse and back away.
+<br/><br/>
+WHEN PARKING YOUR VEHICLE
+<br/><br/>
+     Park in a well-lit area to discourage a personal attack and reduce the risk of your car being stolen.  Look around before exiting your car.  Close all windows and lock the doors. Take any valuables with you.
+<br/><br/>
+AT HOME
+<br/><br/>
+     Have your keys ready before you get to the door.  Make sure your entrance area is well lit.  If you live in an apartment, close the lobby door behind you, especially if a stranger is approaching.  Make all visitors and delivery persons use the door bell.  Place your name on the inside of the mailbox where only the mailcarrier will see it. If a name must be on the outside, use only the last name, e.g., the Smiths.
+<br/><br/>
+     When recording an outgoing message on your answering machine, avoid leaving your name, phone number or a message that you're not at home.  A good message  is, "We are unable to answer the phone, please leave a message."  Say it confidently.
+<br/><br/>
+     If a stranger asks to use the phone, keep your door locked and tell them you will place the call for them.  If there is an emergency, call 9-1-1.  Keep him/her out of your home.  Should you arrive  home and find signs of a burglary,  STAY OUT.  Call 9-1-1 from a pay phone or a neighbor's house. Wait there for the police to arrive.
+<br/><br/>
+ELEVATOR
+
+     When waiting for an elevator, leave the lobby/hallway if someone makes you feel uncomfortable.
+Check the elevator's mirror before entering.  Stand between the control panel and door when in the elevator.  Exit the elevator if someone enters that makes you feel uneasy. If you feel the need to give an excuse, you can say, "Oh, I forgot my mail."  If accosted, press as many buttons as possible to try and get the elevator to stop at the next floor.
+<br/><br/>
+SUBWAY AND BUS
+<br/><br/>
+     Use only entrances marked by a green indica­tor, where there is a clerk present 24 hours a day.  Have your money or metro card avail­able.  Use designated waiting areas during off-peak
+hours.  Ride in the conductor's car during off-peak hours.  Sit in the center of the car, away from the door, to avoid a purse or chain snatch.
+<br/><br/>
+     Cover jewelry; turn stone rings toward the palm side of your hand.  Stay awake and aware and exit with the crowd.  Wait and walk close to the wall.  Wait for the bus on the sidewalk away from the
+curb.  Sit near the front of the bus.  Be aware of your wallet/purse to avoid a pickpocket.
+<br/><br/>
+ATM
+<br/><br/>
+     Be aware of suspicious people near the en­trance.  Use well-lit, well-populated ATM's.  Avoid ATM's that have unlocked doors or are directly out on the street.  Block a bystander's view when doing your trans­action.  Use mirrors, positioned at the ATM, to see behind you.  Put your money away and take your card and receipt before exiting an ATM.  Your card is exclusively for your entry only. Make sure the door closes behind you.
+
+<br/><br/>
+<p>FONT: <a href="http://www.nyc.gov/html/nypd/html/crime_prevention/personalsafety.shtml">NYPD</a></p>
+<br/><br/><br/><br/><br/>        
+        </div>
+
+        <div data-role="footer" class="footer">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#map-page" data-icon="arrow-l" class="ui-btn" data-transition="slide">Back to map</a></li>
+              <li><a href="tel:911" data-icon="phone" class="ui-btn" data-role="button">Call 911</a></li>
+              
+            </ul>
+          </div>
+          <h6>Copyright ® Renata Rocha</h6>
+        </div> 
+      </div>
+
+<!--- Scripts -->
     <script>
       var map;
       function initMap() {
@@ -59,7 +159,7 @@
           var lat = position.coords.latitude;
           var lng = position.coords.longitude;
   
-          map = new google.maps.Map(document.getElementById('map'), {
+          map = new google.maps.Map(document.getElementById('map-canvas'), {
             center: {lat: lat, lng: lng},
             zoom: 15
           });
@@ -84,11 +184,18 @@
           });
 
         });
-      }
+      };
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEITVD6cuQkW2OA-LGEAHYA2NNzpy51bo&callback=initMap"
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEITVD6cuQkW2OA-LGEAHYA2NNzpy51bo"
     async defer></script>
+    
+    <script>
+    $( document ).on( "pageinit", "#map-page", function() {
+      initMap();
+    });
+      </script>
 
-
+    
     </body>
 </html>

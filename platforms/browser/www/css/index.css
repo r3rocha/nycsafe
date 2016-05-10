@@ -41,7 +41,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform: none;
     width:100%;
 }
 
@@ -78,6 +78,14 @@ h1 {
     text-align:center;
 }
 
+h1, h2, h3, h4, h5, h6, .ui-btn {
+    text-transform: uppercase;
+}
+
+h6 {
+   font-size:10px !important; 
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -112,4 +120,24 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+
+ #map {
+            height: 80%;
+          }
+
+    
+#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+
+.footer {
+    position: fixed !important;
+    bottom: 0px;
+    width: 100%;
+}
+
+.header {
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
 }
